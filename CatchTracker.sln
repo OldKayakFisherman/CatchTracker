@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{11D3F834-D163-4ECB-919F-2EEE67C2032A}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C0AF9717-52D0-49CA-B6D6-ACF6F540D589}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatchTracker.Web", "src\CatchTracker.Web\CatchTracker.Web.csproj", "{E1416E93-9D53-4731-9B7A-B10920DCBC8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1416E93-9D53-4731-9B7A-B10920DCBC8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1416E93-9D53-4731-9B7A-B10920DCBC8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1416E93-9D53-4731-9B7A-B10920DCBC8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1416E93-9D53-4731-9B7A-B10920DCBC8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E1416E93-9D53-4731-9B7A-B10920DCBC8F} = {11D3F834-D163-4ECB-919F-2EEE67C2032A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72A62320-2DBE-499F-96B0-6B994CE885B1}
+	EndGlobalSection
+EndGlobal

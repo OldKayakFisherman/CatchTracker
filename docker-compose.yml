@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+
+  web:
+    depends_on: 
+        - db
+    build:
+        context: src/CatchTracker.Web
+        dockerfile: Dockerfile
+    ports:
+        - "8000:80" 
+  db:
+    image: postgres:15.1
+    container_name: catchdb
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}" ]
+      interval: 1s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+    volumes:
+      - db-data:/var/lib/postgresql/data/
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  db-data:
